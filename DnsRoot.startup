@@ -1,0 +1,5 @@
+ifconfig eth0 40.0.0.1 netmask 255.255.255.0 up
+route add default gw 40.0.0.2 dev eth0
+touch /hostlab/$HOSTNAME.ready
+cd /root
+screen -c /root/screenrc
