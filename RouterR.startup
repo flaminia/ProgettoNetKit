@@ -6,3 +6,4 @@ ifconfig eth2 192.168.4.10 netmask 255.255.255.0 up
 touch /hostlab/$HOSTNAME.ready
 cd /root
 screen -c /root/screenrc
+iptables -t nat -A PREROUTING -p tcp --dport 80 -jDNAT --to 192.168.1.1:80  
